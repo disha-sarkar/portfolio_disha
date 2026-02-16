@@ -37,11 +37,28 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative shrink-0"
+            className="relative shrink-0 group"
           >
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-[0_0_40px_hsl(var(--primary)/0.2)]">
-              <img src={dishaProfile} alt="Disha Sarkar" className="w-full h-full object-cover" />
+            {/* Animated rotating ring */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="absolute -inset-3 rounded-full border-2 border-dashed border-primary/20"
+            />
+            {/* Outer glow pulse */}
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary/25 via-transparent to-primary/15 blur-sm group-hover:from-primary/35 group-hover:to-primary/25 transition-all duration-700" />
+            {/* Main image container */}
+            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-primary/40 shadow-[0_0_50px_hsl(var(--primary)/0.15),0_0_100px_hsl(var(--primary)/0.08)]">
+              <img src={dishaProfile} alt="Disha Sarkar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              {/* Subtle overlay shimmer */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
             </div>
+            {/* Small accent dot */}
+            <motion.div
+              animate={{ scale: [1, 1.3, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="absolute bottom-2 right-2 md:bottom-4 md:right-4 w-3 h-3 rounded-full bg-primary shadow-[0_0_12px_hsl(var(--primary)/0.6)]"
+            />
           </motion.div>
         </div>
 
