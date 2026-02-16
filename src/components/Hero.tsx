@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import dishaProfile from "@/assets/disha-profile.png";
 
 const Hero = () => {
   return (
@@ -10,24 +11,39 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
       </div>
 
-      <div className="relative z-10 text-center section-padding max-w-4xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-6"
-        >
-          Hello, I'm
-        </motion.p>
+      <div className="relative z-10 section-padding max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-10">
+          <div className="text-center md:text-left">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-6"
+            >
+              Hello, I'm
+            </motion.p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
-        >
-          Disha <span className="text-gradient">Sarkar</span>
-        </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+            >
+              Disha <span className="text-gradient">Sarkar</span>
+            </motion.h1>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative shrink-0"
+          >
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-[0_0_40px_hsl(var(--primary)/0.2)]">
+              <img src={dishaProfile} alt="Disha Sarkar" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
+        </div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +73,7 @@ const Hero = () => {
             Contact Me
           </a>
         </motion.div>
-      </div>
+        </div>
 
       {/* Scroll indicator */}
       <motion.div
