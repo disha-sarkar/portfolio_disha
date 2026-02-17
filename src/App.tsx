@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Background from "@/components/Background"; // 👈 ADD THIS
+import CursorTrail from "@/components/CursorTrail";
 
 const queryClient = new QueryClient();
 
@@ -13,7 +14,9 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       {/* Global Animated Background */}
-      <Background />
+     <Background />
+<CursorTrail />
+
 
       <Toaster />
       <Sonner />

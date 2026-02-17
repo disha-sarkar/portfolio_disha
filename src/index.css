@@ -80,6 +80,10 @@
     background: var(--gradient-card);
     @apply border border-border/50 backdrop-blur-sm;
   }
+ body {
+  cursor: default;
+}
+
 
   .glow {
     box-shadow: var(--shadow-glow);
