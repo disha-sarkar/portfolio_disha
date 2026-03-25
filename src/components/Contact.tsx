@@ -37,7 +37,7 @@ const Contact = () => {
             icon: MapPin,
             label: "Location",
             value: "Kolkata, West Bengal",
-            href: "#",
+            href: "https://maps.app.goo.gl/WjmYmrCpPwJhep7j6",
           },
         ].map((item, i) => (
           <motion.a
