@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="section-padding max-w-5xl mx-auto">
+    <section id="about" className="section-padding max-w-5xl mx-auto bg-white/60 backdrop-blur-md rounded-xl">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -14,7 +14,7 @@ const About = () => {
           initial={{ opacity: 0, letterSpacing: "0.5em" }}
           whileInView={{ opacity: 1, letterSpacing: "0.3em" }}
           transition={{ duration: 0.6 }}
-          className="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-3"
+          className="text-orange-500 font-heading text-sm tracking-[0.3em] uppercase mb-3"
         >
           About Me
         </motion.p>
@@ -24,7 +24,7 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-heading text-3xl md:text-4xl font-bold mb-8 leading-snug"
+          className="font-heading text-3xl md:text-4xl font-bold mb-8 leading-snug text-gray-800 dark:text-white"
         >
           Crafting digital experiences & intelligent systems,{" "}
           <span className="text-gradient relative">
@@ -37,7 +37,7 @@ const About = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-secondary-foreground text-black leading-relaxed max-w-3xl"
+          className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl"
         >
           I am a passionate Computer Science Engineering student at Bangalore
           Technological Institute, specializing in Web Development and
@@ -76,7 +76,7 @@ const About = () => {
               <p className="text-3xl font-heading font-bold text-gradient">
                 {stat.value}
               </p>
-              <p className="text-muted-foreground text-sm mt-1">
+              <p className="text-gray-400 text-sm mt-1">
                 {stat.label}
               </p>
             </motion.div>
