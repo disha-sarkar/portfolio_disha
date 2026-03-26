@@ -37,7 +37,7 @@ const About = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-secondary-foreground text-lg leading-relaxed max-w-3xl"
+          className="text-secondary-foreground text-black leading-relaxed max-w-3xl"
         >
           I am a passionate Computer Science Engineering student at Bangalore
           Technological Institute, specializing in Web Development and
