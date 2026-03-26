@@ -60,9 +60,10 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-body);
-  }
+  @apply text-foreground;
+  background: transparent;
+}
+
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
@@ -79,6 +80,10 @@
     background: var(--gradient-card);
     @apply border border-border/50 backdrop-blur-sm;
   }
+ body {
+  cursor: default;
+}
+
 
   .glow {
     box-shadow: var(--shadow-glow);
