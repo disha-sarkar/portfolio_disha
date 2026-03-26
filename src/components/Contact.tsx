@@ -44,7 +44,8 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative py-24 px-6 max-w-6xl mx-auto overflow-hidden"
+      className="relative py-24 px-6 max-w-6xl mx-auto 
+           bg-gradient-to-b from-white to-gray-50 overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
@@ -66,7 +67,7 @@ const Contact = () => {
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           Let’s <span className="text-gradient">Connect</span>
         </h2>
-        <p className="text-black max-w-xl mx-auto">
+        <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
           I’m always open to discussing new opportunities, collaborations,
           and exciting tech projects.
         </p>
@@ -92,14 +93,13 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative bg-white/5 backdrop-blur-xl border border-white/10 
-                         rounded-2xl p-6 hover:border-pink-500/40 
-                         hover:shadow-[0_0_30px_rgba(236,72,153,0.2)]
-                         transition-all duration-300"
+             className="group relative bg-white border border-gray-200 
+                       rounded-2xl p-6 hover:border-pink-400 
+                      hover:shadow-xl transition-all duration-300"
             >
               <div className="flex items-center justify-between">
                 <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center ${item.colorClasses}`}
+                  className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-sm ${item.colorClasses}`}
                 >
                   <Icon className="w-5 h-5" />
                 </div>
@@ -109,10 +109,10 @@ const Contact = () => {
                 )}
               </div>
 
-              <p className="mt-6 text-sm text-gray-400 uppercase tracking-wide">
+              <p className="mt-6 text-sm text-gray-500 uppercase tracking-wide">
                 {item.label}
               </p>
-              <p className="text-lg font-semibold mt-1 text-white group-hover:text-pink-400 transition">
+              <p className="text-lg font-semibold mt-1 text-gray-800 group-hover:text-pink-500 transition">
                 {item.value}
               </p>
             </motion.a>
@@ -131,9 +131,10 @@ const Contact = () => {
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=sarkardisha238@gmail.com"
           className="inline-flex items-center gap-2 px-8 py-4 rounded-full
-                     bg-gradient-to-r from-pink-500 to-purple-600
-                     text-white font-semibold
-                     hover:scale-105 transition-transform duration-300 shadow-lg"
+                    bg-gradient-to-r from-pink-500 to-purple-600
+                    text-white font-semibold tracking-wide
+                    hover:scale-105 hover:shadow-xl
+                    transition-all duration-300"
         >
           Send Me an Email
           <ArrowUpRight className="w-4 h-4" />
