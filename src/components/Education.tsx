@@ -4,7 +4,7 @@ import { GraduationCap } from "lucide-react";
 const education = [
   {
     program: "B.Tech (CSE)",
-    institute: "Bangalore Technological Institute",
+    institute: "B.P. Poddar Institute of Management and Technology",
     year: "2025",
     score: "CGPA: 7.5 (till 2nd sem)",
   },
@@ -12,7 +12,7 @@ const education = [
     program: "12th (PUC)",
     institute: "Jaguli Netaji Vidhyapith (H.S)",
     year: "2023",
-    score: "65%",
+    score: "---",
   },
   {
     program: "10th (SSLC)",

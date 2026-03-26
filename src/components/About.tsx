@@ -39,8 +39,8 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl"
         >
-          I am a passionate Computer Science Engineering student at Bangalore
-          Technological Institute, specializing in Web Development and
+          I am a passionate Computer Science Engineering student at B.P. Poddar Institute of 
+          Management and Technology, specializing in Web Development and
           Artificial Intelligence. My journey revolves around building
           responsive web applications, designing intelligent systems, and
           transforming ideas into scalable digital solutions.
@@ -58,7 +58,7 @@ const About = () => {
             { label: "Projects Completed", value: "3+" },
             { label: "Programming Languages", value: "3" },
             { label: "Technologies Explored", value: "10+" },
-            { label: "Graduating Year", value: "2025" },
+            { label: "Graduating Year", value: "2028" },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}
