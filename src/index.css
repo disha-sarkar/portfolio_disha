@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* ================= BASE LAYER ================= */
 @layer base {
   :root {
     --background: 240 10% 6%;
@@ -53,39 +53,35 @@
     --gradient-card: linear-gradient(160deg, hsl(240 8% 12%), hsl(240 8% 8%));
     --shadow-glow: 0 0 40px -10px hsl(38 92% 55% / 0.25);
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
-  @apply text-foreground;
-  background: transparent;
-}
-
+    @apply text-foreground;
+    background: transparent;
+    cursor: default;
+    font-family: var(--font-body);
+  }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   }
 }
 
+/* ================= UTILITIES ================= */
 @layer utilities {
   .text-gradient {
-  background: linear-gradient(to right, #ff7a18, #ff3d00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    background: linear-gradient(to right, #ff7a18, #ff3d00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   .card-glass {
     background: var(--gradient-card);
     @apply border border-border/50 backdrop-blur-sm;
   }
- body {
-  cursor: default;
-}
-
 
   .glow {
     box-shadow: var(--shadow-glow);
